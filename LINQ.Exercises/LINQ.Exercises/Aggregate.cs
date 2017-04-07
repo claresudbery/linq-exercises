@@ -81,7 +81,7 @@ namespace LINQ.Exercises
         [TestMethod]
         public void Find_earliest_birthday()
         {
-            DateTime result = TestData.People.First().Born;
+            DateTime result = TestData.People.Min(x => x.Born);
 
             Assert.AreEqual(new DateTime(1950, 12, 1), result);
         }
@@ -154,9 +154,40 @@ namespace LINQ.Exercises
             // if this day is bigger than 15, then substract 10 from it
             // else add 5 to it
             // and add resulting number to your aggregate
-            int result = TestData.People.Aggregate(0, (sum, person) => 1);
+
+            int result1 = TestData.People.Aggregate(256, (sum, person) =>
+            {
+                int output;
+                if (person.Born.Day > 15)
+                {
+                    output = person.Born.Day - 10;
+                }
+                else
+                {
+                    output = person.Born.Day + 5;
+                }
+                return sum + output;
+            });
+
+            int result2 = TestData.People.Aggregate(256, (sum, person) =>
+            {
+                var output = person.Born.Day > 15 
+                    ? person.Born.Day - 10
+                    : person.Born.Day + 5;
+                return sum + output;
+            });
+
+            int result = TestData.People.Aggregate(256, (sum, person) => 
+                sum + SecretFormula(person.Born.Day));
 
             Assert.AreEqual(296, result);
+        }
+
+        private int SecretFormula(int bornDay)
+        {
+            return bornDay > 15
+                    ? bornDay - 10
+                    : bornDay + 5;
         }
     }
 }

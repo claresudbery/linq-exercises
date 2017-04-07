@@ -179,7 +179,11 @@ namespace LINQ.Exercises
 
             string[] words = { "aPPLE", "AbAcUs", "bRaNcH", "BlUeBeRrY", "ClOvEr", "cHeRry" };
 
-            IEnumerable<string> result = words;
+            IEnumerable<string> result = words
+                .OrderBy(x => x.Length)
+                .ThenBy(x => x);
+
+            //IEnumerable<string> result = words;
 
             Assert.IsTrue(result.SequenceEqual(new string[] { "aPPLE", "AbAcUs", "bRaNcH", "cHeRry", "ClOvEr", "BlUeBeRrY" }));
         }
@@ -191,9 +195,20 @@ namespace LINQ.Exercises
         {
             string[] digits = { "zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine" };
 
-            IEnumerable<string> result = digits;
-
+            IEnumerable<string> result = digits
+                .Where(x => x.Substring(1, 1) == "i")
+                .Reverse();
+            
             Assert.IsTrue(result.SequenceEqual(new string[] { "nine", "eight", "six", "five" }));
+        }
+    }
+
+    // The string comparer class is as below
+    public class StringComparer : IComparer<string>
+    {
+        public int Compare(string x, string y)
+        {
+            return string.Compare(x, y, StringComparison.OrdinalIgnoreCase);
         }
     }
 }

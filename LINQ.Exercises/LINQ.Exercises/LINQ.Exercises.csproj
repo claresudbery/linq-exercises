@@ -52,6 +52,8 @@
   <ItemGroup>
     <Compile Include="Aggregate.cs" />
     <Content Include="Answers\AggregateAnswers.txt" />
+    <Compile Include="Extensions.cs" />
+    <Compile Include="OtherOperations.cs" />
     <Compile Include="CombinedOperations.cs" />
     <Compile Include="Element.cs" />
     <Compile Include="Orderby.cs" />
@@ -59,6 +61,7 @@
     <Compile Include="Restriction.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SetOperations.cs" />
+    <Compile Include="TestData2.cs" />
     <Compile Include="TestData.cs" />
     <Content Include="Answers\CombinedOperationsAnswers.txt" />
     <Content Include="Answers\PartitionAnswers.txt" />
