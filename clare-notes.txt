@@ -1,0 +1,14 @@
+Two hours is not long if you want to cover the following:
+	Query syntax vs fluent syntax (including "let" keyword)
+	Combining intersect with aggregate to solve the Combined example
+	Group by
+	Lazy evaluation
+
+A worked example of both fluent and query method syntax: http://jesseliberty.com/2011/01/27/linq-and-fluent-programming/
+The repo / exercises we were working with today: https://github.com/walkhard/linq-exercises
+101 Linq Samples (but they all use query syntax): https://code.msdn.microsoft.com/101-LINQ-Samples-3fb9811b/viewsamplepack
+A query syntax example using the "let" keyword to create variables in the middle of the statement: https://msdn.microsoft.com/en-us/library/bb383976.aspx
+How the Distinct method works: https://www.dotnetperls.com/distinct
+How the Intersect method works: https://www.dotnetperls.com/intersect
+How to use Aggregate and IntersectWith to find the intersection of multiple lists: http://stackoverflow.com/questions/1674742/intersection-of-multiple-lists-with-ienumerable-intersect
+

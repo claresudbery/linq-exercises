@@ -27,6 +27,8 @@ namespace LINQ.Exercises
         [TestMethod]
         public void GetCharactersCommonToEveryonesFirstNamesUsingSetElements_ReturnCharEnumerable()
         {
+            // See CombinedOperationExperiment for another way of doing this!
+
             List<char> result = TestData.People[0].FirstName.ToCharArray()
                 .Intersect(TestData.People[1].FirstName.ToCharArray())
                 .Intersect(TestData.People[2].FirstName.ToCharArray())

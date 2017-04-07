@@ -52,6 +52,7 @@
   <ItemGroup>
     <Compile Include="Aggregate.cs" />
     <Content Include="Answers\AggregateAnswers.txt" />
+    <Compile Include="CombinedOperationExperiment.cs" />
     <Compile Include="Extensions.cs" />
     <Compile Include="OtherOperations.cs" />
     <Compile Include="CombinedOperations.cs" />
