@@ -1,3 +1,5 @@
+Repo: https://github.com/claresudbery/linq-exercises
+
 Two hours is not long if you want to cover the following:
 	Query syntax vs fluent syntax (including "let" keyword)
 	Combining intersect with aggregate to solve the Combined example
@@ -11,4 +13,8 @@ A query syntax example using the "let" keyword to create variables in the middle
 How the Distinct method works: https://www.dotnetperls.com/distinct
 How the Intersect method works: https://www.dotnetperls.com/intersect
 How to use Aggregate and IntersectWith to find the intersection of multiple lists: http://stackoverflow.com/questions/1674742/intersection-of-multiple-lists-with-ienumerable-intersect
+Feedback after session: Working in pairs is good	
+Split people into pairs. Rotate pairs frequently. Pay attention to timings! 
 
+!! I ended up spending ages experimenting with the solution to one problem in particular - the result is in CombinedOperationExperiment.cs in the repo: https://github.com/claresudbery/linq-exercises
+(there is also a copy in ConsoleCatchAll, which is where I originally wrote it)

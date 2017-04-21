@@ -7,6 +7,11 @@ namespace ConsoleCatchallTests
     [TestFixture]
     public class CombinedOperationExperiment
     {
+        // Useful for turning this into query syntax: 
+        // http://jesseliberty.com/2011/01/27/linq-and-fluent-programming/
+        // A query syntax example using the "let" keyword to create variables in the middle of the statement: https://msdn.microsoft.com/en-us/library/bb383976.aspx
+        // 101 Linq Samples (but they all use query syntax): https://code.msdn.microsoft.com/101-LINQ-Samples-3fb9811b/viewsamplepack
+
         private List<Person> _people = new List<Person>
             {
                 new Person { FirstName = "Jean" },
